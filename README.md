@@ -45,3 +45,5 @@ Business reports – Providing executives with quick overviews of lengthy report
 Educational content – Creating concise notes for study purposes.
 
 In conclusion, the Text Summarization Tool is a practical application of NLP that saves time and increases productivity. It effectively reduces the reading burden by focusing only on the most important parts of a document. While this implementation uses extractive summarization for efficiency, it can be further enhanced with advanced deep learning models like BART or T5 for more human-like, abstractive summaries. This makes it a valuable addition to any text processing or information retrieval system.
+
+<img width="533" height="102" alt="Image" src="https://github.com/user-attachments/assets/d9a6cf62-4360-455e-8c84-70232bf410ea" />
