@@ -1,0 +1,45 @@
+# Text Summarization Tool - CODTECH Internship
+# Author: Sudheer
+# Date: 2025-08-14
+
+# Install dependencies (run once)
+# pip install nltk gensim
+
+import nltk
+from gensim.summarization import summarize
+
+# Download required NLTK data
+nltk.download('punkt')
+
+def summarize_text(text, ratio=0.3):
+    """
+    Summarize the given text using gensim's summarize function.
+    :param text: The input lengthy text (string).
+    :param ratio: Proportion of sentences to keep (0 < ratio < 1).
+    :return: Summarized text.
+    """
+    try:
+        summary = summarize(text, ratio=ratio)
+        return summary if summary else "Text too short to summarize."
+    except ValueError:
+        return "Error: Unable to summarize. Please check input length."
+
+# Example: Replace with your own lengthy article
+input_text = """
+Natural Language Processing (NLP) is a field of artificial intelligence 
+that focuses on the interaction between computers and humans using 
+natural language. The ultimate goal of NLP is to enable computers to 
+understand, interpret, and respond to human language in a valuable way. 
+NLP is used in a variety of applications, including language translation, 
+sentiment analysis, and speech recognition. With the rise of big data 
+and advanced algorithms, NLP has become an essential tool for processing 
+and making sense of vast amounts of textual information. The advancements 
+in deep learning have significantly improved the accuracy and capabilities 
+of NLP systems, making them more effective for real-world applications.
+"""
+
+print("=== Original Text ===")
+print(input_text)
+
+print("\n=== Summary ===")
+print(summarize_text(input_text, ratio=0.4))
